@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: cryptomonitor-container
-        image: vinitkulkarni/crypto-monitor-img:8
+        image: vinitkulkarni/crypto-monitor-img:{BUILD_ID}
         ports:
         - containerPort: 80
