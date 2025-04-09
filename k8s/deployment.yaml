@@ -1,0 +1,21 @@
+ 
+# frontend/k8s/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: react-app
+  template:
+    metadata:
+      labels:
+        app: react-app
+    spec:
+      containers:
+        - name: react-container
+          image: jayaram9196/docker_demoapp:8
+          ports:
+            - containerPort: 80
